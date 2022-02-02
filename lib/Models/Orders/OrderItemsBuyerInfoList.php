@@ -30,7 +30,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
  *
  * @author   Stefan Neuhaus / ClouSale
  */
-class OrderItemsBuyerInfoList implements ModelInterface, ArrayAccess, IterableType
+class OrderItemsBuyerInfoList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -343,10 +343,5 @@ class OrderItemsBuyerInfoList implements ModelInterface, ArrayAccess, IterableTy
         }
 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
-    }
-
-    public function getSubClass()
-    {
-        return OrderItemBuyerInfo::class;
     }
 }
